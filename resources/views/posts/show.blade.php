@@ -9,15 +9,15 @@
   <script src="{{ asset('bootstrap-5/js/bootstrap.bundle.min.js')}}"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <title>Blog | {{ $post[1] }}</title>
+  <title>Blog | {{ $post->title }}</title>
 </head>
 
 <body>
   <div class="container">
     <article class="blog-post">
-      <h2 class="display-5 link-body-emphasis mb-1"> {{ $post[1] }} </h2>
-      <p class="blog-post-meta">{{ date("d M Y H:i", strtotime($post[3])) }} by <a href="#">User</a></p>
-      <p>{{ $post[2] }}</p>
+      <h2 class="display-5 link-body-emphasis mb-1"> {{ $post->title }} </h2>
+      <p class="blog-post-meta">{{ date("d M Y H:i", strtotime($post->created_at)) }} by <a href="#">User</a></p>
+      <p>{{ $post->content }}</p>
     </article>
     <a href="{{ url("/posts")}}">Kembali</a>
   </div>
