@@ -18,5 +18,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Simpan</button>
   </form>
+  <form action="{{url("/posts/$post->id")}}" method="POST" class="form-control">
+    @method("DELETE")
+    @csrf
+    <button type="submit" class="btn btn-danger">Hapus</button>
+  </form>
 </div>
 @endsection

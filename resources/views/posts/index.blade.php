@@ -16,11 +16,11 @@
         {{ date("d M Y H:i", strtotime($post->created_at)) }}</small></p>
       <a href="{{url("/posts/$post->id")}}" class="btn btn-primary">Selengkapnya</a>
       <a href="{{url("/posts/$post->id/edit")}}" class="btn btn-warning">Edit</a>
-      <form action="{{url("/posts/$post->id")}}" method="POST">
+      {{--<form action="{{url(" /posts/$post->id")}}" method="POST">
       @method("DELETE")
       @csrf
       <button type="submit" class="btn btn-danger">Hapus</button>
-      </form>
+      </form>--}}
     </div>
     </div>
   @endforeach
