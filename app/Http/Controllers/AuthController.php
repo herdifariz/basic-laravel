@@ -12,7 +12,12 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view("auth.login");
+        if (!Auth::check()) {
+            return redirect("login");
+        } else {
+            return redirect("posts");
+        }
+        // return view("auth.login");
     }
 
     public function authenticate(Request $request)
