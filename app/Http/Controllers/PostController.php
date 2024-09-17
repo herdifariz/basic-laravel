@@ -152,7 +152,7 @@ class PostController extends Controller
 
     private function notify_telegram($post)
     {
-        $api_token = "7403026440:AAFy6dZyhCbGFtZLhguSH7JwYry4p5XGw5s";
+        $api_token = "API_TOKEN";
         $url = "https://api.telegram.org/bot{$api_token}/sendMessage";
         $chat_id = -4538667726;
         $content = "New Blog Posted: {$post->title}";
