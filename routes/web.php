@@ -5,9 +5,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+  return view('welcome');
+});
 
 // Route::get("/hello", "App\Http\Controllers\HelloController@index");
 
@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::resource('posts', PostController::class);
 
-Route::get('/', [AuthController::class, "login"]);
+// Route::get('/', [AuthController::class, "login"]);
 
 Route::get("login", [AuthController::class, "login"]);
 Route::post("login", [AuthController::class, "authenticate"]);
